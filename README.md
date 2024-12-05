@@ -78,7 +78,7 @@ start-yarn.sh
 ```
 
 
-1. Prepare Input Files :  Create a directory in the Hadoop HDFS by using the following command:
+2. Prepare Input Files :  Create a directory in the Hadoop HDFS by using the following command:
 
 
 ```sql
@@ -94,7 +94,7 @@ hadoop fs -copyFromLocal /path/to/local/input_file.txt /user/hadoop/input
 ```
 
 
-1. Verify Files in HDFS : Confirm the input files have been successfully uploaded
+3. Verify Files in HDFS : Confirm the input files have been successfully uploaded
 
 
 ```sql
@@ -118,7 +118,7 @@ hdfs dfs -rm -r /user/hadoop/output
 ```
 
 
-1. Run the Hadoop Job: Execute the Hadoop job using the appropriate jar file or command
+4. Run the Hadoop Job: Execute the Hadoop job using the appropriate jar file or command
 
 
 ```sql
@@ -167,13 +167,13 @@ if the job is success, the last output will be like this:
 
 
 
-1. Check the Job Status: Monitor the job progress through the terminal logs.
+5. Check the Job Status: Monitor the job progress through the terminal logs.
 
 
 ex: [http://localhost:9870/explorer.html#/user/hadoop/output_new/part-00000](http://localhost:9870/explorer.html#/user/hadoop/output_new/part-00000)
 
 
-1. After the job completes, check the contents of the output directory in HDFS
+6. After the job completes, check the contents of the output directory in HDFS
 
 
 ```sql
@@ -181,7 +181,7 @@ hadoop fs -ls /user/hadoop/output
 ```
 
 
-1. View the Output: Use the hadoop fs -cat command to display the output
+7. View the Output: Use the hadoop fs -cat command to display the output
 
 
 ```sql
@@ -189,7 +189,7 @@ hadoop fs -cat hadoop fs -cat /user/hadoop/output_new/part-00000
 ```
 
 
-1. Download the Output to Your Local System: Copy the output file(s) from HDFS to your local directory
+8. Download the Output to Your Local System: Copy the output file(s) from HDFS to your local directory
 
 
 ```sql
@@ -201,7 +201,7 @@ fs -copyToLocal /user/hadoop/output_new/part-00000 /Users/jeannetaoliviasantoso/
 ```
 
 
-1. Customize the Output File Name (Optional) : If you prefer a custom output file name, rename it during the `copyToLocal`
+9. Customize the Output File Name (Optional) : If you prefer a custom output file name, rename it during the `copyToLocal`
 
 
 ```sql
@@ -215,7 +215,7 @@ hadoop fs -copyToLocal /user/hadoop/output_new/part-00000 /Users/jeannetaolivias
 ```
 
 
-1. Stop the Hadoop Services (Optional)
+10. Stop the Hadoop Services (Optional)
 
 
 ```sql
