@@ -5,5 +5,4 @@
 __pycache__/
 *.pyc
 
-# Ignore output directory files
-/output/
+
